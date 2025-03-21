@@ -1,16 +1,18 @@
 import React from 'react'
 import Sidebar from '../layout/Sidebar';
-import Home from './Home';
+import { Outlet } from 'react-router-dom';
+import Navbar from '../layout/Navbar';
 
 const Dashboard = () => {
     return (
-        <section className='w-full h-[calc(100vh-4rem)] flex justify-center items-center'>
-            <div className="w-full h-full grid grid-cols-12">
-                <div className="flex col-span-2 col-start-1">
+        <section className='w-full h-[calc(100vh-4rem)] flex flex-col'>
+            <Navbar />
+            <div className="w-full h-full grid grid-cols-8">
+                <div className="flex col-span-1 col-start-1">
                     <Sidebar />
                 </div>
-                <section className="col-span-9 col-start-3">
-                    <Home />
+                <section className="col-span-7 col-start-2">
+                    <Outlet />
                 </section>
             </div>
         </section>

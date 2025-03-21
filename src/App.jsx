@@ -5,7 +5,7 @@ import Navbar from './layout/Navbar';
 const App = () => {
     return (
         <main>
-            <Navbar />
+            
             <Dashboard />
         </main>
     )
