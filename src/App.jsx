@@ -1,10 +1,13 @@
 import React from 'react';
+import Dashboard from './pages/Dashboard';
+import Navbar from './layout/Navbar';
 
 const App = () => {
     return (
-        <section>
-            <h1>Hello World</h1>
-        </section>
+        <main>
+            <Navbar />
+            <Dashboard />
+        </main>
     )
 };
 
