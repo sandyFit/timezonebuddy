@@ -11,7 +11,7 @@ const Dashboard = () => {
                 <div className="flex col-span-1 col-start-1">
                     <Sidebar />
                 </div>
-                <section className="col-span-7 col-start-2">
+                <section className="col-span-7 col-start-2 p-8">
                     <Outlet />
                 </section>
             </div>
