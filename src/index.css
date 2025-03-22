@@ -45,7 +45,7 @@
     }
 
     .sidebar-links {
-      @apply flex items-center gap-2 cursor-pointer hover:bg-purple-600 p-2 rounded-lg 
+      @apply flex items-center gap-2 cursor-pointer hover:bg-violet-700 p-2 rounded-lg 
         transition-colors;
     }
 

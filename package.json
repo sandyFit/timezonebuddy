@@ -24,6 +24,7 @@
     "@progress/kendo-popup-common": "^1.9.2",
     "@progress/kendo-react-animation": "^10.0.0",
     "@progress/kendo-react-buttons": "^10.0.0",
+    "@progress/kendo-react-charts": "^10.0.0",
     "@progress/kendo-react-common": "^10.0.0",
     "@progress/kendo-react-data-tools": "^10.0.0",
     "@progress/kendo-react-dateinputs": "^10.0.0",

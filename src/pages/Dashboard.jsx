@@ -5,7 +5,7 @@ import Navbar from '../layout/Navbar';
 
 const Dashboard = () => {
     return (
-        <section className='w-full h-[calc(100vh-4rem)] flex flex-col'>
+        <section className='w-full h-screen flex flex-col'>
             <Navbar />
             <div className="w-full h-full grid grid-cols-8">
                 <div className="flex col-span-1 col-start-1">
