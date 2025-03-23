@@ -1,0 +1,27 @@
+.world-clock {
+    padding: 0 2rem 2rem 2rem;
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+        0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.world-clock-header {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    color: #5b21b6;
+}
+
+.worldClock-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: .8;
+    padding: 0;
+}        
+
+.world-clock-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+}

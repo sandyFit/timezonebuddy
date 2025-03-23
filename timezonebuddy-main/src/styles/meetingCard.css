@@ -1,0 +1,56 @@
+.meeting-card {
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    margin-bottom: .5rem;
+}
+
+.meeting-card.upcoming {
+    background-color: #fbfbfd;
+    color: #111827;
+}
+
+.meeting-card.past {
+    background-color: #fee2e2;
+    color: #111827;
+}
+
+.meeting-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.meeting-title {
+    font-weight: 500;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.meeting-status.green {
+    font-size: 1rem;
+    color: #10b981;
+}
+
+.meeting-status.red {
+    font-size: 1rem;
+    color: #ef4444;
+}
+
+.meeting-date {
+    margin: 0.2rem 0;
+    font-size: 1rem;
+}
+
+.meeting-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.95rem;
+}
+
+.meeting-description {
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+    color: #374151;
+}

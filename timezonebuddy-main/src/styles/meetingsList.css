@@ -1,0 +1,24 @@
+.meeting-list {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.panel-bar {
+    width: 100%;
+}
+
+.panel-bar-item {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.no-meetings {
+    background-color: #f8f5ff;
+    color: #6b46c1;
+    border-radius: 8px;
+    border: 1px solid #d4c2ff;
+    padding: 16px;
+    text-align: center;
+}

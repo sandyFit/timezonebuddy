@@ -1,0 +1,18 @@
+.timezone-widget {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    color: #4C1D95;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.25rem 0.5rem;
+    border-radius: 8px;
+}
+
+.timezone-icon {
+    color: inherit;
+}
+
+.current-time {
+    font-weight: bold;
+}

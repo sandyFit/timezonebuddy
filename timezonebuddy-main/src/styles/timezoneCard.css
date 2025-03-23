@@ -1,0 +1,62 @@
+.timezone-card {
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+        0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.timezone-card.day {
+    background-color: #fef9c3;
+    color: #000000;
+}
+
+.timezone-card.night {
+    background-color: #4d179a;
+    color: #ffffff;
+}
+
+.timezone-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .6rem .6rem 0 .6rem;
+}
+
+.timezone-title {
+    font-weight: 400;
+    font-size: 0.8rem;
+}
+
+.timezone-icon {
+    font-size: 1rem;
+}
+
+.timezone-card-body {
+    padding: 0 .6rem .6rem .6rem;
+}
+
+.timezone-time {
+    margin: 0.1rem 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: .9;
+}
+
+.timezone-title.day {
+    color: #000;
+}
+
+.timezone-title.night {
+    color: #fff;
+}
+
+.timezone-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8rem;
+}
+
+.timezone-contacts {
+    margin-top: 0.1rem;
+}

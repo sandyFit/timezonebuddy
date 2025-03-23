@@ -1,0 +1,17 @@
+.upcoming-meetings {
+    width: 100%;
+}
+
+.upcoming-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #6b46c1;
+}
+
+.upcoming-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: .8;
+    padding: 0;
+}

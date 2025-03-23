@@ -1,0 +1,31 @@
+/* global-styles.css */
+body .k-panelbar {
+    /* Panel container */
+    background-color: #f8f5ff !important;
+    border-color: #d4c2ff !important;
+}
+
+body .k-panelbar>.k-item>.k-link {
+    /* Panel headers */
+    background-color: #ede7ff !important;
+    color: #4a1e9e !important;
+    border-color: #d4c2ff !important;
+}
+
+body .k-panelbar>.k-item.k-state-active>.k-link {
+    /* Active panel header */
+    background-color: #8a63d2 !important;
+    color: white !important;
+}
+
+body .k-panelbar>.k-item>.k-content {
+    /* Panel content */
+    background-color: #fbfaff !important;
+    border-color: #d4c2ff !important;
+}
+
+body .k-panelbar .k-i-arrow-n,
+body .k-panelbar .k-i-arrow-s {
+    /* Panel icons */
+    color: #6b46c1 !important;
+}
