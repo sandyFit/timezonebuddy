@@ -1,5 +1,4 @@
 import React from 'react';
-import Sidebar from '../layout/Sidebar';
 import { Outlet } from 'react-router-dom';
 import Navbar from '../layout/Navbar';
 import Sidepanel from '../layout/Sidepanel';

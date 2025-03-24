@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardHeader, CardBody } from '@progress/kendo-react-layout';
+import { Card, CardBody } from '@progress/kendo-react-layout';
 import '../../styles/meetingCard.css';
 
 const MeetingCard = ({ meeting, attendees = [] }) => {

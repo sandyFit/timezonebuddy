@@ -1,6 +1,6 @@
 import React from "react";
 import PieChart from "../components/charts/PieChart";
-import teamData from "../data/team"; // Ensure this import is correct
+import teamData from "../data/team"; 
 import meetingsData from "../data/meetings";
 import UpcomingMeetings from "../components/UpcomingMeetings";
 import QuickActions from "../components/ui/QuickActions";
