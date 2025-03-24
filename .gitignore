@@ -1,5 +1,5 @@
 # Ignore Telerik activation key file
-telerik-license.txt
+/telerik-license.txt
 
 # Logs
 logs
