@@ -2,10 +2,10 @@ import React from 'react';
 import { SvgIcon } from '@progress/kendo-react-common';
 import * as kendoSvgIcons from '@progress/kendo-svg-icons';
 import { NavLink } from 'react-router-dom';
-import { Avatar, PanelBar, PanelBarItem } from '@progress/kendo-react-layout';
+import { Avatar, PanelBar } from '@progress/kendo-react-layout';
 import teamData from '../data/team';
 
-const Sidebar = () => {
+const Sidepanel = () => {
     const { homeIcon, calendarIcon, userIcon } = kendoSvgIcons;
 
     // Get the first employee (or adjust as needed)
@@ -28,20 +28,22 @@ const Sidebar = () => {
                 </div>
             </div>
 
-            {/* Kendo PanelBar */}
             <PanelBar className="sidebar-panelbar">
-                <PanelBarItem expanded={true} title={<><SvgIcon icon={homeIcon} /> Home</>}>
-                    <NavLink to="/dashboard" className="sidebar-link">Go to Dashboard</NavLink>
-                </PanelBarItem>
-                <PanelBarItem title={<><SvgIcon icon={userIcon} /> Team Members</>}>
-                    <NavLink to="/dashboard/team" className="sidebar-link">Team Overview</NavLink>
-                </PanelBarItem>
-                <PanelBarItem title={<><SvgIcon icon={calendarIcon} /> Meeting Planner</>}>
-                    <NavLink to="/dashboard/meeting-planner" className="sidebar-link">Plan a Meeting</NavLink>
-                </PanelBarItem>
+                <NavLink to="/dashboard" className="sidebar-link">
+                    <SvgIcon icon={homeIcon} />
+                    <span>Home</span>
+                </NavLink>
+                <NavLink to="/dashboard/team" className="sidebar-link">
+                    <SvgIcon icon={userIcon} />
+                    <span>Team Members</span>
+                </NavLink>
+                <NavLink to="/dashboard/meeting-planner" className="sidebar-link">
+                    <SvgIcon icon={calendarIcon} />
+                    <span>Meeting Planner</span>
+                </NavLink>
             </PanelBar>
         </aside>
     );
 };
 
-export default Sidebar;
+export default Sidepanel;

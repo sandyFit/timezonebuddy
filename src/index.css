@@ -97,11 +97,6 @@ body {
   /* bg-violet-600 */
 }
 
-/* ACTIVE LINK */
-.sidebar-link.active {
-  background-color: #5B21B6;
-  color: #EDE9FE;
-}
 
 /* TEXT */
 .sidebar-text {
@@ -443,4 +438,8 @@ footer a:focus {
 
 .close-btn:hover {
   background-color: #d1d1d1;
+}
+
+.sidebar-panelbar {
+  background-color: #4b1f94;
 }
