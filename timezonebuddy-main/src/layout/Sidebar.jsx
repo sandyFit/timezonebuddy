@@ -37,6 +37,7 @@ const Sidebar = () => {
                 <div className="avatar-info">
                     <p className='avatar-title'>{employee.name}</p>
                     <p className='avatar-text'>{employee.jobTitle}</p>
+                    <p className='avatar-text'>{employee.timeZone}</p>
                 </div>
             </div>
         </aside>

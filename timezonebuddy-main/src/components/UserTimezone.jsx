@@ -5,7 +5,6 @@ import teamData from "../data/team"; // Import mock data
 import "../styles/userTimezone.css";
 
 const UserTimeZone = () => {
-    // Mock current user (Alice, id=1)
     const currentUser = teamData.find(user => user.id === 1);
     const userTimeZone = currentUser?.timeZone || "UTC"; 
     const [currentTime, setCurrentTime] = useState(new Date());

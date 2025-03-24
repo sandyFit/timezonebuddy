@@ -3,17 +3,19 @@ import { Dialog } from "@progress/kendo-react-dialogs";
 import { Button } from "@progress/kendo-react-buttons";
 import { DropDownList } from "@progress/kendo-react-dropdowns";
 
-
-const AddEventModal = ({ isOpen, onClose, meetings, currentUser }) => {
+const AddEventModal = ({ isOpen, onClose, meetings, currentUser, onUpdateMeetings }) => {
     const [selectedMeeting, setSelectedMeeting] = useState(null);
+    const [confirmationMessage, setConfirmationMessage] = useState(null); // State for confirmation message
 
     const handleJoinMeeting = () => {
-        if (selectedMeeting) {         
+        if (selectedMeeting) {
             const updatedMeeting = {
                 ...selectedMeeting,
-                attendees: [...selectedMeeting.attendees, currentUser.id]
+                attendees: [...selectedMeeting.attendees, currentUser.id],
             };
-            // console.log("Joined meeting:", updatedMeeting);  
+            // Update the meetings list with the modified meeting
+            onUpdateMeetings(updatedMeeting);
+            setConfirmationMessage(`You have successfully joined the meeting: ${selectedMeeting.title}`); // Set confirmation message
         }
     };
 
@@ -40,9 +42,20 @@ const AddEventModal = ({ isOpen, onClose, meetings, currentUser }) => {
                         </div>
                     )}
 
+                    {/* Display confirmation message */}
+                    {confirmationMessage && (
+                        <div className="confirmation-message" style={{ marginTop: "1rem", color: "green" }}>
+                            {confirmationMessage}
+                        </div>
+                    )}
+
                     <div className="modal-actions">
-                        <Button themeColor="light" onClick={onClose}>Cancel</Button>
-                        <Button themeColor="primary" onClick={handleJoinMeeting}>Join Meeting</Button>
+                        <Button themeColor="light" onClick={onClose}>
+                            Cancel
+                        </Button>
+                        <Button themeColor="primary" onClick={handleJoinMeeting}>
+                            Join Meeting
+                        </Button>
                     </div>
                 </div>
             </Dialog>
@@ -51,3 +64,4 @@ const AddEventModal = ({ isOpen, onClose, meetings, currentUser }) => {
 };
 
 export default AddEventModal;
+

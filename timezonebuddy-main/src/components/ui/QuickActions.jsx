@@ -3,16 +3,24 @@ import { useState } from 'react';
 import { Notification, NotificationGroup } from '@progress/kendo-react-notification';
 import AIDialog from "../ai-suggestions/AIDialog";
 import AddEventModal from "../modals/AddEventModal";
-import meetings from "../../data/meetings"; 
+import meetingsData from "../../data/meetings"; 
 
 const QuickActions = ({ teamData, currentUser }) => {
     const [isModalOpen, setModalOpen] = useState(false);
     const [showAISuggestions, setShowAISuggestions] = useState(false);
     const [reminderSent, setReminderSent] = useState(false);
 
+    const [meetings, setMeetings] = useState(meetingsData); // Use the imported 'meetingsData'
+
+    const handleUpdateMeetings = (updatedMeeting) => {
+        const updatedMeetings = meetings.map(meeting =>
+            meeting.id === updatedMeeting.id ? updatedMeeting : meeting
+        );
+        setMeetings(updatedMeetings); // Update the meetings list
+    };
+
     // Open modal to join a meeting
     const handleJoinMeeting = () => setModalOpen(true);
-
 
     const handleAISuggestions = () => {
         if (!currentUser) {
@@ -40,8 +48,9 @@ const QuickActions = ({ teamData, currentUser }) => {
             <AddEventModal
                 isOpen={isModalOpen}
                 onClose={() => setModalOpen(false)}
-                meetings={meetings}  // Pass meetings data to the modal
-                currentUser={currentUser}  // Pass current user info to handle joining
+                meetings={meetings}
+                currentUser={currentUser}
+                onUpdateMeetings={handleUpdateMeetings}
             />
 
             {/* AI Meeting Time Suggestions */}
@@ -56,11 +65,11 @@ const QuickActions = ({ teamData, currentUser }) => {
             {/* Reminder Notification */}
             <NotificationGroup
                 style={{
-                    position: 'absolute',  
-                    top: '60px',           
-                    right: '10px',         
-                    maxWidth: '300px',     
-                    zIndex: 1000,        
+                    position: 'absolute',
+                    top: '60px',
+                    right: '10px',
+                    maxWidth: '300px',
+                    zIndex: 1000,
                 }}
             >
                 {reminderSent && (
@@ -68,7 +77,7 @@ const QuickActions = ({ teamData, currentUser }) => {
                         type={{ style: 'success', icon: true }}
                         style={{
                             width: '100%',
-                            maxWidth: '300px',  
+                            maxWidth: '300px',
                             wordWrap: 'break-word',
                             whiteSpace: 'normal',
                         }}
@@ -83,3 +92,4 @@ const QuickActions = ({ teamData, currentUser }) => {
 };
 
 export default QuickActions;
+

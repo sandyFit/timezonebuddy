@@ -59,6 +59,13 @@ body {
   padding: 1rem;
   display: flex;
   flex-direction: column;
+  transition: width 0.3s ease;
+}
+
+/* Sidebar - collapsed (when toggled) */
+.sidebar.collapsed {
+  width: 80px;
+  /* Collapsed width */
 }
 
 /* MENU */
@@ -101,6 +108,47 @@ body {
   font-size: 0.8rem;
   text-transform: uppercase;
 }
+
+/* AVATAR */
+.avatar-container {
+  display: flex;
+  align-items: end;
+  gap: 0.8rem;
+  margin-bottom: 3rem;
+}
+
+.avatar-img {
+  border: 2px solid white;
+}
+
+.avatar-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  gap: 0;
+}
+
+.avatar-title {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 4px;
+  line-height: 1.1;
+
+}
+
+.avatar-text {
+  font-size: 0.7rem;
+  font-weight: 300;
+  line-height: 0.9;
+  margin-top: 6px;
+  margin-bottom: 0;
+
+}
+
+.avatar-title,
+.avatar-text {
+  color: #fff;
+}
 /* ***** END OF SIDEBAR ******* */
 
 
@@ -131,28 +179,12 @@ body {
 }
 
 
-.language-switcher {
+.notification-container {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
 
-
-.language-switcher button {
-  background-color: transparent;
-  border: 1px solid #4F46E5;
-  color: #4F46E5;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: all 0.3s ease;
-}
-
-.language-switcher button:hover {
-  background-color: #4F46E5;
-  color: white;
-}
 
 /* ***** END OF NAVBAR ******* */
 
@@ -162,9 +194,17 @@ body {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  max-width: 1200px;
   margin: 3rem auto;
   padding: 0 1rem;
+  
+  transition: max-width 0.3s ease;
+
+}
+
+/* When sidebar is collapsed */
+.home-container.expanded {
+  max-width: calc(100% - 80px);
+
 }
 
 .welcome-section {
@@ -172,17 +212,18 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+
 .quick-actions {
   display: flex;
   height: 40px;
 }
-
 
 .row {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
 }
+
 .pie-chart {
   display: flex;
   flex-direction: column;
@@ -210,6 +251,7 @@ h5.chart-title {
   width: 100% !important;
   height: 300px !important;
   flex-grow: 1;
+  overflow: hidden;
 }
 
 .chart-card {
@@ -219,6 +261,9 @@ h5.chart-title {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .meetings-section,
@@ -239,36 +284,9 @@ h5.chart-title {
   justify-content: center;
   align-items: center;
 }
-
-.avatar-container {
-  display: flex;
-  align-items: end;
-  gap: 0.6rem;
-  margin-bottom: 3rem;
-}
-
-.avatar-img {
-  border: 2px solid white;
-}
-
-.avatar-title {
-  font-size: .8rem;
-  font-weight: 400;
-  line-height: .5;
-}
-
-.avatar-text {
-  font-size: .7rem;
-  font-weight: 300;
-  line-height: .5;
-}
-
-.avatar-title,
-.avatar-text {
-  color: #fff;
-}
-
 /* *********** END OF DASHBOARD HOME *********** */
+
+
 .meeting-container {
   width: 400px;
   display: flex;
@@ -313,3 +331,78 @@ h5.chart-title {
   background-color: white;
 }
 
+
+/* Landing page wrapper should use flex to push footer down */
+.landing-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+}
+
+.hero {
+  background-color: #5B21B6;
+  color: white;
+  text-align: center;
+  margin-top: 4rem;
+  padding-top: 3rem;
+  flex: 1;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 4rem;
+}
+
+.features h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #5B21B6;
+}
+
+.features-list {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+footer {
+  background-color: #5B21B6;
+  color: white;
+  text-align: center;
+  padding: 1rem 2rem;
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer a:focus {
+  outline: none;
+}

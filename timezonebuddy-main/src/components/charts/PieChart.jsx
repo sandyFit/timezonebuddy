@@ -25,7 +25,7 @@ const PieChart = () => {
                     Workforce Across Time Zones
                 </h5>
             </div>
-            <Chart transitions={false}> {/* 🚀 Disable re-animation */}
+            <Chart transitions={false}> 
                 <ChartSeries>
                     <ChartSeriesItem type="pie" data={chartData} />
                 </ChartSeries>
