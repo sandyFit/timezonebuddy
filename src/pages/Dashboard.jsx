@@ -2,7 +2,7 @@ import React from 'react';
 import Sidebar from '../layout/Sidebar';
 import { Outlet } from 'react-router-dom';
 import Navbar from '../layout/Navbar';
-
+import Sidepanel from '../layout/Sidepanel';
 
 const Dashboard = () => {
     return (
@@ -10,7 +10,7 @@ const Dashboard = () => {
             <Navbar />
             <div className="dashboard-container">
                 <div className="dashboard-sidebar">
-                    <Sidebar />
+                    <Sidepanel />
                 </div>
                 <section className="dashboard-content">
                     <Outlet />
